@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.4.0-0.13.1
+
+### Changed
+* Update to Restic v0.13.1
+
 ## 1.3.1-0.9.6
 
 ### Changed

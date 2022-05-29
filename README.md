@@ -7,16 +7,16 @@ This container runs restic backups in regular intervals.
 * Support for different targets (tested with: Local, NFS, SFTP, AWS)
 * Support `restic mount` inside the container to browse the backup files
 
-**Container**: [lobaro/restic-backup-docker](https://hub.docker.com/r/lobaro/restic-backup-docker/)
+**Container**: [mwallace582/restic-backup-docker](https://github.com/mwallace582/restic-backup-docker/pkgs/container/restic-backup-docker)
 
 Stable
 ```
-docker pull lobaro/restic-backup-docker:1.2-0.9.4
+docker pull ghcr.io/mwallace582/restic-backup-docker:1.4.0-0.13.1
 ```
 
 Latest (experimental)
 ```
-docker pull lobaro/restic-backup-docker:latest
+docker pull ghcr.io/mwallace582/restic-backup-docker:latest
 ```
 
 ## Hooks
@@ -35,7 +35,7 @@ Please don't hesitate to report any issue you find. **Thanks.**
 Clone this repository
 
 ```
-git clone https://github.com/Lobaro/restic-backup-docker.git
+git clone https://github.com/mwallace582/restic-backup-docker.git
 cd restic-backup-docker
 ```
 
@@ -187,6 +187,6 @@ Starting from v1.3.0 versioning follows [Semantic versioning](http://semver.org/
 
 Build metadata is used to declare the Restic version.
 
-**Example:** 1.3.0+0.9.5 (includes Restic 0.9.5)
+**Example:** 1.3.0-0.9.5 (Includes version 1.3.0 of this tool and Restic 0.9.5)
 
-For changelog see: https://github.com/lobaro/restic-backup-docker/releases
+For changelog see: https://github.com/mwallace582/restic-backup-docker/releases
