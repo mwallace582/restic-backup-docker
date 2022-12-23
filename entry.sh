@@ -7,13 +7,13 @@ if [ -n "${NFS_TARGET}" ]; then
     mount -o nolock -v ${NFS_TARGET} /mnt/restic
 fi
 
-restic snapshots ${RESTIC_INIT_ARGS} &>/dev/null
+exec restic snapshots ${RESTIC_INIT_ARGS} --latest 1 &>/dev/null
 status=$?
 echo "Check Repo status $status"
 
 if [ $status != 0 ]; then
     echo "Restic repository '${RESTIC_REPOSITORY}' does not exists. Running restic init."
-    restic init ${RESTIC_INIT_ARGS}
+    exec restic init ${RESTIC_INIT_ARGS}
 
     init_status=$?
     echo "Repo init status $init_status"
@@ -24,8 +24,6 @@ if [ $status != 0 ]; then
     fi
 fi
 
-
-
 echo "Setup backup cron job with cron expression BACKUP_CRON: ${BACKUP_CRON}"
 echo "${BACKUP_CRON} /usr/bin/flock -n /var/run/backup.lock /bin/backup >> /var/log/cron.log 2>&1" > /var/spool/cron/crontabs/root
 
@@ -33,7 +31,7 @@ echo "${BACKUP_CRON} /usr/bin/flock -n /var/run/backup.lock /bin/backup >> /var/
 touch /var/log/cron.log
 
 # start the cron deamon
-crond
+exec crond
 
 echo "Container started."
 
