@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.5.0-0.14.0
+
+### Changed
+* Update to Restic v0.14.0
+* Fixed bug which led to slow stoppage of docker container.
+
 ## 1.4.0-0.13.1
 
 ### Changed

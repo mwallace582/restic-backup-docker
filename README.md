@@ -11,7 +11,7 @@ This container runs restic backups in regular intervals.
 
 Stable
 ```
-docker pull ghcr.io/mwallace582/restic-backup-docker:1.4.0-0.13.1
+docker pull ghcr.io/mwallace582/restic-backup-docker:1.5.0-0.14.0
 ```
 
 Latest (experimental)
