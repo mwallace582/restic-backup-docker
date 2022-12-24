@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.5.2-0.14.0
+
+### Changed
+* Revert the fix for slow docker container stops. There's gotta be a way to fix this, but `exec` isn't it.
+
 ## 1.5.1-0.14.0
 
 ### Changed
