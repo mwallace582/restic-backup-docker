@@ -7,7 +7,7 @@ if [ -n "${NFS_TARGET}" ]; then
     mount -o nolock -v ${NFS_TARGET} /mnt/restic
 fi
 
-exec restic snapshots ${RESTIC_INIT_ARGS} --latest 1 &>/dev/null
+exec restic list index &>/dev/null
 status=$?
 echo "Check Repo status $status"
 
