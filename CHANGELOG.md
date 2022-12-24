@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.5.1-0.14.0
+
+### Changed
+* Changed the "is restic initialized" command to something faster.
+
 ## 1.5.0-0.14.0
 
 ### Changed
